@@ -85,40 +85,40 @@
 	}
     }
 
-    .dropdown-menu {
-	position: absolute;
-	top: 100%;
-	z-index: 1000;
-	width: auto;
-	float: left;
-	padding: 5px 1px;
-	margin: 2px 0 2px 0;
-	display: none;
-	list-style: none;
-	@include border-radius(2px);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-	background-color: lighten($btn-success-bg, 40%);
-	li {
-	    a {
-		display: block;
-		width: 100%;
-		padding: 4px;
-		color: $a-color;
-		display: inline-block;
-		text-decoration: none;
-		&:hover {
-		    color: lighten($a-color, 100%);
-		    text-shadow: 1px 1px 5px $a-color;
-		}
-	    }
-	    &:hover {
-		@include border-radius(2px);
-		background-color: $btn-success-bg;
-	    }
-	}
-    }
 
 }
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    float: left;
+    padding: 5px 0px;
+    margin: 2px 0 2px 0;
+    display: none;
+    list-style: none;
+    @include border-radius(3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background-color: lighten($btn-success-bg, 50%);
+    li {
+	a {
+	    display: block;
+	    clear: both;
+	    padding: 8px 14px;
+	    color: $a-color;
+	    text-decoration: none;
+	    &:hover {
+		color: lighten($a-color, 100%);
+		text-shadow: 1px 1px 2px $a-color;
+	    }
+	}
+	&:hover {
+	    @include border-radius(2px);
+	    background-color: $btn-success-bg;
+	}
+    }
+}
+
 
 
 .caret {
