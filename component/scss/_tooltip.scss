@@ -1,0 +1,62 @@
+$zindex-tooltip: 400;
+$tooltip-arrow-width: 4px;
+$tooltip-opacity: 0.4;
+$tooltip-max-width: 200px;
+
+div {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* 圆角效果 */
+@mixin border-radius($radius: $border-radius) {
+  @if $enable-rounded {
+    border-radius: $radius;
+  }
+}
+
+.tooltip {
+    /* color: #fff; */
+    /* background: black; */
+    position: absolute;
+    display: block;
+    font-size: 5px;
+    z-index: $zindex-tooltip;
+    &.in {
+	opacity: $tooltip-opacity;
+    }
+    
+    &.tooltip-bottom {
+	padding: 0 $tooltip-arrow-width;
+	margin-top: 3px;
+	.tooltip-arrow {
+	    top: 0;
+	    left: 50%;
+	    border-width: 0 $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width;
+	    border-bottom-color: black;
+	}
+    }
+}
+
+
+// Arrows
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+
+.tooltip-inner {
+    border: 1px solid black;
+    margin-top: $tooltip-arrow-width;
+    padding: 3px 8px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    @include border-radius(3px);
+    max-width: $tooltip-max-width;
+}
