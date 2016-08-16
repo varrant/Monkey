@@ -1,0 +1,29 @@
+body {
+}
+
+
+button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 120px;
+  height: 36px;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 4px;
+  outline: none;
+}
+
+button > div {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);;
+  border-radius: 50%;
+}
+
+.success {background-color: #04A43B;}
+.info {background-color: #0C9AF2; }
+.danger {background-color: #dd0d32;}
+.big {
+  width: 400px;
+  height: 300px;
+}
