@@ -16,17 +16,17 @@
 
 /* 设置按钮的基本属性 */
 @mixin button-variant($color, $background, $border) {
-    color: $color;
-    background-color: $background;
-    border-color: $border;
+  color: $color;
+  background-color: $background;
+  border-color: $border;
 
-    /* 使用darken函数来设置比原来颜色深12%的值 */
-    $active-background: darken($background, 8%);
-    $active-color: darken($color, 10%);
-    &:active {
-	color: $active-color;
-	background: $active-background;
-    }
+  /* 使用darken函数来设置比原来颜色深12%的值 */
+  $active-background: darken($background, 8%);
+  $active-color: darken($color, 10%);
+  &:active {
+    color: $active-color;
+    background: $active-background;
+  }
 }
 
 /* 圆角效果 */
@@ -46,89 +46,89 @@
 }
 
 .btn {
-     display: inline-block;
-     text-align: center;
-     cursor: pointer;
-     border: $border_width solid transparent;
-     @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
-     @include transition(all .1s ease-in-out);
-     &:focus {
-     	 outline: none;
-     }
-     &:active {
-	 @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-     }
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border: $border_width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $line-height, $btn-border-radius);
+  @include transition(all .1s ease-in-out);
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
 }
 
 .btn-primary {
-    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
 }
 
 .btn-danger {
-    @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border)
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border)
 }
 
 .btn-success {
-    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border)
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border)
 }
 
 
 .dropdown {
-    display: inline-block;
-    position: relative;
-    &.open {
-	.btn {
-	    background: darken($btn-success-bg, 12%);
-	}
-	.dropdown-menu {
-	    display: block;
-	}
+  display: inline-block;
+  position: relative;
+  &.open {
+    .btn {
+      background: darken($btn-success-bg, 12%);
     }
+    .dropdown-menu {
+      display: block;
+    }
+  }
 
 
 }
 
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    z-index: 1000;
-    float: left;
-    padding: 5px 0px;
-    margin: 2px 0 2px 0;
-    display: none;
-    list-style: none;
-    @include border-radius(3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    background-color: lighten($btn-success-bg, 50%);
-    li {
-	a {
-	    display: block;
-	    clear: both;
-	    padding: 8px 14px;
-	    color: $a-color;
-	    text-decoration: none;
-	    &:hover {
-		color: lighten($a-color, 100%);
-		text-shadow: 1px 1px 2px $a-color;
-	    }
-	}
-	&:hover {
-	    @include border-radius(2px);
-	    background-color: $btn-success-bg;
-	}
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  float: left;
+  padding: 5px 0px;
+  margin: 2px 0 2px 0;
+  display: none;
+  list-style: none;
+  @include border-radius(3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  background-color: lighten($btn-success-bg, 50%);
+  li {
+    a {
+      display: block;
+      clear: both;
+      padding: 8px 14px;
+      color: $a-color;
+      text-decoration: none;
+      &:hover {
+        color: lighten($a-color, 100%);
+        text-shadow: 1px 1px 2px $a-color;
+      }
     }
+    &:hover {
+      @include border-radius(2px);
+      background-color: $btn-success-bg;
+    }
+  }
 }
 
 
 
 .caret {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    vertical-align: middle;
-    border-left: 4px solid transparent;
-    border-top: 4px solid;
-    border-right: 4px solid transparent;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  vertical-align: middle;
+  border-left: 4px solid transparent;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
 }
 
 /* .dropdown { */
