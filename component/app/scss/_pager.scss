@@ -1,0 +1,41 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+.pager {
+  padding-left: 0;
+  margin: 20px 0;
+  text-align: center;
+  list-style: none;
+  @include clearfix();
+  li {
+    display: inline;
+    > a {
+      display: inline-block;
+      background: #ffffff;
+      padding: 5px 14px;
+      text-decoration: none;
+      border-radius: 15px;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+      }
+    }
+  }
+
+  .next > a {
+    float: right;
+  }
+
+  .previous > a {
+    float: left;
+  }
+}

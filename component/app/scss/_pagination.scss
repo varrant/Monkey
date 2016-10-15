@@ -1,0 +1,52 @@
+a {
+  margin: 0px;
+  padding: 0px;
+}
+.pagination {
+  display: inline-block;
+  padding-left: 0px;
+  margin: 20px 0;
+  list-style: none;
+  border-radius: 4px;
+  > li {
+    display: inline;
+    > a {
+      position: relative;
+      float: left;
+      text-decoration: none;
+      border: 1px solid #ddd;
+      padding: 6px 12px;
+      margin-left: -1px;
+      color: #428bca;
+      background-color: #fff;
+
+    }
+    &.active {
+      > a {
+        background: #428bca;
+        color: #fff;
+      }
+    }
+
+    &.disabled {
+      > a {
+        background: #fff;
+        cursor: not-allowed;
+        color: #ddd;
+      }
+    }
+  }
+
+  > li:first-child > a {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  > li:last-child > a {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+
+}
