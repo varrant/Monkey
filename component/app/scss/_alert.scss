@@ -1,0 +1,18 @@
+.alert {
+  padding: 15px;
+  margin: 20px 0px;
+  background: #ffffff;
+  border-radius: 4px;
+  .close {
+    float: right;
+    border: 1px solid #fff;
+    background: #ffffff;
+    position: relative;
+    top: -2px;
+    &:focus,
+    &:hover {
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
