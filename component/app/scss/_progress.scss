@@ -30,13 +30,23 @@
   transition: width .6s ease;
 }
 
-// .progress.active .progress-bar {
-//   -webkit-animation: progress-bar-stripes 2s linear infinite;
-//   animation: progress-bar-stripes 2s linear infinite;
-// }
+.progress.active .progress-bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
 
 .progress-striped .progress-bar{
   // background-image: -webkit-linear-gradient(45deg, rgba(255,255,2,0.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, white 25%, white 50%, red 50%, red 75%, white 75%, white);
   background-size: 40px 40px;
+}
+
+
+
+
+.linear {
+  height: 20px;
+  width: 100%;
+  background-image: linear-gradient(top, #000 0%, #0ff 100%);
+  background-image: linear-gradient(to bottom, #000 0%, #0ff 100%);
 }

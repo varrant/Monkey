@@ -63,14 +63,29 @@
 
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border)
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.074);
+  &:hover {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
 }
 
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border)
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.074);
+  &:hover {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
 }
 
 .btn-success {
   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border)
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.074);
+  &:hover {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  }
 }
 
 
